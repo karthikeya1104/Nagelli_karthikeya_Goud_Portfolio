@@ -1,0 +1,21 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#61DAFB"/>
+    </filter>
+  </defs>
+  <rect width="120" height="120" fill="#000"/>
+  <text
+    x="50%"
+    y="50%"
+    text-anchor="middle"
+    dominant-baseline="central"
+    fill="#63e4ceff"
+    font-size="90"
+    font-family="Comfortaa, sans-serif"
+    font-weight="700"
+    filter="url(#glow)"
+  >
+    K
+  </text>
+</svg>

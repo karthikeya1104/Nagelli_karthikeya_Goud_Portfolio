@@ -1,0 +1,145 @@
+/* Import Swiper CSS */
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+/* Tailwind Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Light mode variables */
+:root {
+  --bg: #ffffff;               /* main background */
+  --text: #000000;             /* main text */
+  --text-muted: #4b5563;       /* secondary text */
+  --accent: #a855f7;           /* purple-500 for underline/buttons */
+  --accent-hover: #ec4899;     /* pink-500 hover highlights */
+  --card-bg: rgba(255,255,255,0.2);  /* frosted card background light mode */
+  --card-border: rgba(0,0,0,0.1);    /* border for light mode */
+}
+
+/* Dark mode variables */
+.dark {
+  --bg: #000000;
+  --text: #ffffff;
+  --text-muted: #9ca3af;
+  --accent: #a855f7;
+  --accent-hover: #ec4899;
+  --card-bg: rgba(0,0,0,0.25);       /* frosted card background dark mode */
+  --card-border: rgba(255,255,255,0.1); /* border for dark mode */
+}
+
+/* Global body styles */
+body {
+  @apply bg-[var(--bg)] text-[var(--text)] font-sans transition-colors duration-300;
+}
+
+/* Inputs & Cards (frosted glass) */
+.input, .card, input, textarea, button {
+  background-color: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border-radius: 0.75rem;
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+/* Inputs focus effect */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-hover);
+}
+
+/* Buttons hover effect */
+button {
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.9;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text);
+  transition: color 0.3s ease;
+}
+p, span, a, li {
+  color: var(--text-muted);
+  transition: color 0.3s ease;
+}
+a:hover {
+  color: var(--accent-hover);
+  transition: color 0.3s ease;
+}
+
+/* Swiper Pagination */
+.swiper-pagination-bullet {
+  background: #999;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.swiper-pagination-bullet-active {
+  background: var(--accent);
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Gradient Border Animation */
+@keyframes border-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.animate-border-gradient {
+  background: linear-gradient(90deg, #a855f7, #ec4899, #6366f1);
+  background-size: 200% 200%;
+  animation: border-gradient 3s linear infinite;
+}
+
+/* Card hover shadow + scale */
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+/* Optional floating background icons */
+.floating-icon {
+  position: absolute;
+  font-size: 6rem;
+  opacity: 0.05;
+  pointer-events: none;
+  animation: pulse 8s infinite;
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.05; }
+  50% { transform: scale(1.1); opacity: 0.1; }
+}
+
+/* Utility for scrollable sections */
+section {
+  position: relative;
+  z-index: 10;
+}
+
+/* Swiper pagination bullets */
+.custom-pagination .swiper-pagination-bullet {
+  background: #9ca3af; /* gray-400 */
+  opacity: 0.6;
+  width: 10px;
+  height: 10px;
+  margin: 0 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.custom-pagination .swiper-pagination-bullet-active {
+  background: #6366f1; /* indigo-500 */
+  opacity: 1;
+}
