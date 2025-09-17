@@ -1,12 +1,39 @@
-# React + Vite
+# 🌐 Portfolio – Nagelli Karthikeya Goud
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p>
+  <a href="https://nagellikarthikeya.vercel.app/">
+    <img src="https://img.shields.io/badge/Visit%20Portfolio-Click%20Here-green?style=for-the-badge&logo=vercel" />
+  </a>
+</p>
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to my personal portfolio website!  
+Showcasing my **projects, skills, and contact information** in a modern and interactive way. ✨  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Tech Stack  
+🖥️ **Frontend:** React + Vite  
+🎨 **Styling:** TailwindCSS  
+🎥 **Animations:** Framer Motion  
+☁️ **Deployment:** Vercel  
+
+---
+
+## ✨ Features  
+✔️ Clean & Modern UI  
+✔️ Fully Responsive (Mobile + Desktop)  
+✔️ Smooth Animations & Transitions  
+✔️ Fast & Optimized Performance  
+
+---
+
+## 📬 Contact Me  
+📧 Email: [nagellikarthikeya@gmail.com](mailto:nagellikarthikeya@gmail.com)  
+💻 GitHub: [@karthikeya1104](https://github.com/karthikeya1104)  
+🔗 LinkedIn: [Nagelli Karthikeya](https://linkedin.com/in/nagellikarthikeya)  
+
+---
+
+## ⭐ Support  
+If you like my portfolio, don’t forget to **star this repo**! 🌟  
