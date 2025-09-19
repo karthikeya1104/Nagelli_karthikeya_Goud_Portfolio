@@ -51,7 +51,7 @@ export default function Contact() {
       {/* Contact Section */}
       <motion.section
         id="contact"
-        className="min-h-screen scroll-mt-24 bg-[var(--bg)] text-[var(--text)] px-6 py-24 flex flex-col items-center"
+        className="min-h-screen scroll-mt-24 bg-[var(--bg)] text-[var(--text)] px-4 sm:px-6 py-24 flex flex-col items-center max-w-full overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -77,11 +77,11 @@ export default function Contact() {
           />
         </motion.div>
 
-        <div className="w-full max-w-6xl grid md:grid-cols-2 gap-12">
+        <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 overflow-hidden">
           {/* Contact Form */}
           <motion.form
             onSubmit={handleSubmit}
-            className="relative group bg-white/20 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl p-8 shadow-lg backdrop-blur-md overflow-hidden flex flex-col gap-6"
+            className="relative group bg-white/20 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl p-6 sm:p-8 shadow-lg backdrop-blur-md overflow-hidden flex flex-col gap-6 w-full max-w-full"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -137,7 +137,7 @@ export default function Contact() {
 
           {/* Contact Info & Socials */}
           <motion.div
-            className="relative group flex flex-col justify-center gap-8 bg-white/20 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl p-10 shadow-lg backdrop-blur-md"
+            className="relative group flex flex-col justify-center gap-8 bg-white/20 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl p-6 sm:p-10 shadow-lg backdrop-blur-md w-full max-w-full"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -153,20 +153,21 @@ export default function Contact() {
             </p>
 
             {/* Email */}
-            <div className="flex items-center gap-4 p-4 rounded-lg bg-white/10 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-[var(--accent-hover)] transition">
-              <FiMail className="text-2xl text-[var(--accent-hover)]" />
+            <div className="flex items-center gap-4 p-4 rounded-lg bg-white/10 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:border-[var(--accent-hover)] transition w-full max-w-full overflow-hidden">
+              <FiMail className="text-2xl text-[var(--accent-hover)] shrink-0" />
               <a
-                href="mailto:nagellikarthikeya@gmail.com"
-                className="font-medium text-lg text-[var(--text)] hover:text-[var(--accent-hover)] transition"
-              >
-                nagellikarthikeya@gmail.com
-              </a>
+  href="mailto:nagellikarthikeya@gmail.com"
+  className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-[var(--text)] hover:text-[var(--accent-hover)] transition break-words"
+>
+  nagellikarthikeya@gmail.com
+</a>
+
             </div>
 
             {/* Social Links */}
             <div>
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">Find me on</p>
-              <div className="flex gap-6">
+              <div className="flex gap-6 flex-wrap">
                 {socials.map((social) => (
                   <motion.a
                     key={social.name}
@@ -194,7 +195,7 @@ export default function Contact() {
       </motion.section>
 
       {/* Footer */}
-      <footer className="bg-[var(--bg)] text-[var(--text)] flex flex-col items-center text-center py-8 px-4 border-t border-[var(--text-muted)]">
+      <footer className="bg-[var(--bg)] text-[var(--text)] flex flex-col items-center text-center py-8 px-4 border-t border-[var(--text-muted)] w-full max-w-full overflow-hidden">
         <p className="text-gray-500 dark:text-gray-400 mb-2">
           © {new Date().getFullYear()} Nagelli Karthikeya Goud.
         </p>

@@ -10,7 +10,6 @@ import CodingProfiles from './components/CodingProfiles';
 
 
 function App() {
-  const [showPortfolio, setShowPortfolio] = useState(false);
 
   return (
     <div className="bg-bgDark text-white font-sans">

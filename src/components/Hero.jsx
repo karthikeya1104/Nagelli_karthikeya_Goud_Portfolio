@@ -6,16 +6,19 @@ import developerAnimation from '../animations/developer.json';
 
 export default function Hero() {
   return (
-    <main id="home" className="relative min-h-screen flex items-center justify-center px-6 pt-24 bg-[var(--bg)]">
+    <main
+      id="home"
+      className="relative min-h-screen flex items-center justify-center px-6 pt-20 bg-[var(--bg)]"
+    >
       {/* Main Hero Container */}
       <motion.div
-        className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-12"
+        className="relative z-10 max-w-6xl w-full flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         {/* Left: Hero Text + Socials + CTA */}
-        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-6">
+        <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left gap-4 md:gap-6">
           {/* Heading */}
           <motion.h1
             className="text-5xl md:text-7xl font-extrabold text-[var(--text)]"
@@ -51,7 +54,7 @@ export default function Hero() {
 
           {/* Social Icons */}
           <motion.div
-            className="flex gap-6 justify-center md:justify-start text-[var(--text-muted)]"
+            className="flex gap-4 md:gap-6 justify-center md:justify-start text-[var(--text-muted)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.8 }}
@@ -80,7 +83,7 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
@@ -105,7 +108,7 @@ export default function Hero() {
 
         {/* Right: Lottie Animation */}
         <motion.div
-          className="flex-1 flex justify-center md:justify-end mt-12 md:mt-0"
+          className="flex-1 flex justify-center md:justify-end mt-0"
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
