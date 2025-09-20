@@ -1,0 +1,39 @@
+/* Swiper CSS for sliders */
+@import "swiper/css";
+@import "swiper/css/pagination";
+
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* v1 Theme wrapper */
+.v1-theme {
+  @apply bg-v1BgDark text-white font-v1Sans;
+}
+
+.v1-theme {
+  --bg: #1A1F2B;
+  --card-bg: #1e1e1e;
+  --text: white;
+  --text-muted: #9ca3af;
+}
+
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Swiper pagination customization */
+.swiper-pagination-bullet {
+  background: #999;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background: #fff;
+  opacity: 1;
+  transform: scale(1.2);
+}
