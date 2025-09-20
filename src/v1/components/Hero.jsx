@@ -67,7 +67,7 @@ export default function Hero() {
         >
           {/* View Resume */}
           <motion.a
-            href="/resume/Nagelli_Karthikeya_Goud_Resume.pdf"
+            href="/resume/Resume_Nagelli_Karthikeya_Goud.pdf"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
@@ -80,7 +80,7 @@ export default function Hero() {
 
           {/* Download Resume */}
           <motion.a
-            href="/resume/Nagelli_Karthikeya_Goud_Resume.pdf"
+            href="/resume/Resume_Nagelli_Karthikeya_Goud.pdf"
             download
             whileHover={{ scale: 1.05 }}
             className="border border-white text-white px-6 py-3 rounded-md hover:bg-white hover:text-black transition-all"

@@ -89,7 +89,7 @@ export default function Hero() {
             transition={{ delay: 1.2, duration: 0.8 }}
           >
             <a
-              href="/resume/Nagelli_Karthikeya_Goud_Resume.pdf"
+              href="/resume/Resume_Nagelli_Karthikeya_Goud.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 bg-[var(--bg)] border-2 border-purple-500 text-purple-500 rounded-lg font-semibold hover:bg-purple-500 hover:text-white transition transform duration-300 flex items-center gap-2 justify-center"
@@ -97,7 +97,7 @@ export default function Hero() {
               <FaEye /> View Resume
             </a>
             <a
-              href="/resume/Nagelli_Karthikeya_Goud_Resume.pdf"
+              href="/resume/Resume_Nagelli_Karthikeya_Goud.pdf"
               download
               className="px-6 py-3 border-2 border-pink-500 text-pink-500 rounded-lg font-semibold hover:bg-pink-500 hover:text-white transition transform duration-300 flex items-center gap-2 justify-center"
             >
