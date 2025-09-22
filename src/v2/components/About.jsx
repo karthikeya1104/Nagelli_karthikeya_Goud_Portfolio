@@ -28,16 +28,17 @@ const aboutCards = [
   },
 ];
 
-// Variants for staggered animation
+// Container controls staggered children animation
 const containerVariants = {
   hidden: {},
   visible: {
     transition: {
-      staggerChildren: 0.2, // delay between cards
+      staggerChildren: 0.2, // delay between each card
     },
   },
 };
 
+// Card animation
 const cardVariants = {
   hidden: { opacity: 0, y: 40, rotate: -2 },
   visible: { opacity: 1, y: 0, rotate: 0, transition: { duration: 0.6, ease: "easeOut" } },
@@ -50,7 +51,7 @@ export default function About() {
       className="relative min-h-screen scroll-mt-24 px-6 py-24 flex flex-col items-center bg-[var(--bg)] text-[var(--text)] overflow-hidden"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.3 }} // triggers when section is partially visible
       variants={containerVariants}
     >
       {/* Section Title */}
@@ -78,7 +79,7 @@ export default function About() {
           <motion.div
             key={card.title}
             className="relative group bg-white/80 dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-xl p-8 shadow-md flex flex-col items-center text-center overflow-hidden"
-            variants={cardVariants}
+            variants={cardVariants} // children controlled by container
             whileHover={{ scale: 1.03 }}
           >
             {/* Animated full border */}

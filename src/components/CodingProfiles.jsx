@@ -45,7 +45,7 @@ const cardVariants = {
     transition: {
       type: "spring",
       bounce: 0.4,
-      duration: 0.8,
+      duration: 1.2, // slower for scroll
     },
   },
 };
@@ -111,23 +111,25 @@ export default function CodingProfiles() {
             target="_blank"
             rel="noopener noreferrer"
             className="relative group 
-                      bg-white/80 dark:bg-gray-900  /* stronger background */
-                      border border-gray-400 dark:border-gray-700  /* darker border for light mode */
+                      bg-white/80 dark:bg-gray-900
+                      border border-gray-400 dark:border-gray-700
                       rounded-xl p-6 shadow-lg overflow-hidden flex flex-col cursor-pointer"
-            initial={{ opacity: 0, y: 50, rotate: -10, scale: 0.8 }}
-            whileInView={{ opacity: 1, y: 0, rotate: 0, scale: 1 }}
-            transition={{
-              type: "spring",
-              bounce: 0.4,
-              duration: 0.8,
-              delay: idx * 0.3,
-            }}
+            variants={cardVariants}
+            initial="offscreen"
+            whileInView="onscreen"
             viewport={{ once: true, amount: 0.3 }}
+            transition={{ delay: idx * 0.3 }} // stagger cards
+            whileHover={{
+              scale: 1.08,
+              y: -8,
+              rotate: 2,
+              transition: { type: "spring", stiffness: 400, damping: 20 }, // faster hover
+            }}
           >
             <div className="relative z-10 flex items-center gap-4 mb-4">
               <motion.div
-                whileHover={{ rotate: 10, scale: 1.2 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                whileHover={{ rotate: 15, scale: 1.3 }}
+                transition={{ type: "spring", stiffness: 400, damping: 20 }} // faster icon hover
               >
                 {iconMap[key]}
               </motion.div>
