@@ -100,7 +100,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="min-h-screen scroll-mt-24 bg-v1BgDark text-white px-6 py-20 relative overflow-hidden"
+      className="scroll-mt-24 bg-v1BgDark text-white px-6 py-20 relative overflow-hidden"
     >
       {/* Glowing Background Icons */}
       {floatingIcons.map((item, i) => (

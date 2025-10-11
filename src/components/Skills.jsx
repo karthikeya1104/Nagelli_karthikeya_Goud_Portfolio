@@ -1,26 +1,30 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import {
-  FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub,
+import { 
+  FaPython, FaJava, FaReact, FaHtml5, FaCss3Alt, FaGitAlt, FaGithub, FaServer 
 } from 'react-icons/fa';
-import {
-  SiJavascript, SiDjango, SiPostman, SiMysql, SiPostgresql,
-  SiFastapi, SiFlask, SiNextdotjs,
+
+import { 
+  SiJavascript, SiTypescript, SiDjango, SiPostman, SiMysql, SiPostgresql, SiFastapi, SiFlask, SiNextdotjs, SiNodedotjs 
 } from 'react-icons/si';
 
 const frontSkills = {
   'Programming Languages': [
     { name: 'Python', icon: <FaPython className="text-blue-500" /> },
     { name: 'JavaScript', icon: <SiJavascript className="text-yellow-500" /> },
+    { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" /> },  
     { name: 'C++' },
     { name: 'Java', icon: <FaJava className="text-red-500" /> },
   ],
-  'Web Development': [
+  'Full-Stack Development': [
     { name: 'Django', icon: <SiDjango className="text-gray-800 dark:text-white" /> },
     { name: 'Flask', icon: <SiFlask className="text-gray-800 dark:text-white" /> },
     { name: 'FastAPI', icon: <SiFastapi className="text-green-500" /> },
     { name: 'Next.js', icon: <SiNextdotjs className="text-gray-800 dark:text-white" /> },
     { name: 'React.js', icon: <FaReact className="text-sky-500" /> },
+    { name: 'React Native', icon: <FaReact className="text-sky-400" /> }, 
+    { name: 'Node.js', icon: <SiNodedotjs className="text-green-500" /> }, 
+    { name: 'Express', icon: <FaServer className="text-gray-700" /> }, 
     { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
     { name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" /> },
@@ -43,6 +47,7 @@ const frontSkills = {
 const backSkills = {
   Frontend: [
     { name: 'React.js', icon: <FaReact className="text-sky-500" /> },
+    { name: 'React Native', icon: <FaReact className="text-sky-400" /> }, 
     { name: 'HTML', icon: <FaHtml5 className="text-orange-500" /> },
     { name: 'CSS', icon: <FaCss3Alt className="text-blue-500" /> },
     { name: 'Next.js', icon: <SiNextdotjs className="text-gray-800 dark:text-white" /> },
@@ -51,6 +56,8 @@ const backSkills = {
     { name: 'Django', icon: <SiDjango className="text-gray-800 dark:text-white" /> },
     { name: 'FastAPI', icon: <SiFastapi className="text-green-500" /> },
     { name: 'Flask', icon: <SiFlask className="text-gray-800 dark:text-white" /> },
+    { name: 'Node.js', icon: <SiNodedotjs className="text-green-500" /> }, 
+    { name: 'Express', icon: <FaServer className="text-gray-700" /> }, 
   ],
   Databases: [
     { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-500" /> },
@@ -63,6 +70,7 @@ const backSkills = {
     { name: 'Postman', icon: <SiPostman className="text-orange-400" /> },
   ],
 };
+
 
 const SkillItem = ({ skill }) => (
   <motion.div
@@ -89,7 +97,7 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="relative min-h-screen scroll-mt-24 px-6 py-24 flex flex-col items-center bg-[var(--bg)] text-[var(--text)] overflow-hidden"
+      className="relative scroll-mt-24 px-6 py-24 flex flex-col items-center bg-[var(--bg)] text-[var(--text)] overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.3 }}

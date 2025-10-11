@@ -45,7 +45,7 @@ export default function Navbar() {
       </motion.nav>
 
       {/* Mobile Header */}
-      <div className="md:hidden fixed top-0 w-full z-50 bg-v1BgDark border-b border-gray-800 px-6 py-4 flex justify-between items-center">
+      <div className="md:hidden fixed top-0 w-full z-50 bg-gray-900 border-b border-gray-800 px-6 py-4 flex justify-between items-center">
         <button onClick={() => setIsOpen(!isOpen)} className="text-white text-2xl">
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -60,7 +60,7 @@ export default function Navbar() {
             animate={{ x: 0 }}
             exit={{ x: '-100%' }}
             transition={{ duration: 0.4 }}
-            className="md:hidden fixed top-0 left-0 h-full w-64 bg-v1BgDark border-r border-gray-800 p-6 pt-20 z-40"
+            className="md:hidden fixed top-0 left-0 h-full w-64 bg-gray-900 border-r border-gray-800 p-6 pt-20 z-40"
           >
             <ul className="flex flex-col space-y-6 text-gray-300 font-medium">
               {navLinks.map((link) => (

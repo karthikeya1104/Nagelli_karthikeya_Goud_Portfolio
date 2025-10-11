@@ -75,7 +75,7 @@ export default function CodingProfiles() {
   return (
     <section
       id="coding"
-      className="min-h-screen scroll-mt-24 bg-[var(--bg)] text-[var(--text)] px-6 py-24"
+      className="scroll-mt-24 bg-[var(--bg)] text-[var(--text)] px-6 py-24"
     >
       {/* Heading */}
       <motion.div

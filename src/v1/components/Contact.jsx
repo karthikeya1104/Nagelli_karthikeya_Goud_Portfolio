@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
-      className="min-h-screen scroll-mt-[40px] bg-v1BgDark text-white px-6 py-20 flex flex-col items-center justify-center"
+      className="scroll-mt-[40px] bg-v1BgDark text-white px-6 py-20 flex flex-col items-center justify-center"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: false, amount: 0.3 }}

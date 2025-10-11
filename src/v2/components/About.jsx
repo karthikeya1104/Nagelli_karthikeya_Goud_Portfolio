@@ -48,7 +48,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="relative min-h-screen scroll-mt-24 px-6 py-24 flex flex-col items-center bg-[var(--bg)] text-[var(--text)] overflow-hidden"
+      className="relative scroll-mt-24 px-6 py-24 flex flex-col items-center bg-[var(--bg)] text-[var(--text)] overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }} // triggers when section is partially visible

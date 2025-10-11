@@ -69,7 +69,7 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="relative min-h-screen scroll-mt-24 px-6 py-20 flex flex-col items-center bg-[var(--bg)] text-[var(--text)]"
+      className="relative scroll-mt-24 px-6 py-20 flex flex-col items-center bg-[var(--bg)] text-[var(--text)]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}

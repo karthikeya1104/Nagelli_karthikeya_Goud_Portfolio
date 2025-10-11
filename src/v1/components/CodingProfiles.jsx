@@ -57,7 +57,7 @@ export default function CodingProfiles() {
   return (
     <section
       id="coding"
-      className="min-h-screen scroll-mt-[35px] bg-v1BgDark text-white px-6 py-20"
+      className="scroll-mt-[35px] bg-v1BgDark text-white px-6 py-20"
     >
       <motion.h2
         className="text-3xl md:text-4xl font-bold text-center mb-12"

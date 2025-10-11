@@ -51,7 +51,7 @@ export default function Contact() {
       {/* Contact Section */}
       <motion.section
         id="contact"
-        className="min-h-screen scroll-mt-24 bg-[var(--bg)] text-[var(--text)] px-4 sm:px-6 py-24 flex flex-col items-center max-w-full overflow-hidden"
+        className="scroll-mt-24 bg-[var(--bg)] text-[var(--text)] px-4 sm:px-6 py-24 flex flex-col items-center max-w-full overflow-hidden"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}

@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <main
       id="home"
-      className="relative min-h-screen flex items-center justify-center px-6 pt-20 bg-[var(--bg)]"
+      className="relative flex items-center justify-center px-6 pt-20 bg-[var(--bg)]"
     >
       {/* Main Hero Container */}
       <motion.div

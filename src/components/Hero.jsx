@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <main
       id="home"
-      className="relative min-h-screen flex items-center justify-center px-6 pt-20 bg-[var(--bg)]"
+      className="relative flex items-center justify-center px-6 pt-20 bg-[var(--bg)]"
     >
       {/* Main Hero Container */}
       <motion.div
@@ -49,7 +49,7 @@ export default function Hero() {
             animate={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
           >
-            I design and develop modern web applications that solve real-world problems. I focus on scalable, efficient, and clean code with a seamless user experience.
+            I build web and mobile apps that people love to use. I enjoy writing clean, efficient code and turning ideas into smooth, real-world solutions.
           </motion.p>
 
           {/* Social Icons */}

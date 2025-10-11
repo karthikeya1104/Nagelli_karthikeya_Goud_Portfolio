@@ -32,7 +32,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="relative min-h-screen scroll-mt-24 bg-v1BgDark text-white px-6 py-20 flex flex-col items-center overflow-hidden"
+      className="relative scroll-mt-24 bg-v1BgDark text-white px-6 py-20 flex flex-col items-center overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.2 }}

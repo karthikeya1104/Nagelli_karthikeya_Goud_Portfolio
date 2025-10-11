@@ -6,25 +6,25 @@ const aboutCards = [
     icon: <FaUser className="text-4xl mb-4 text-gray-700 dark:text-gray-200" />,
     title: "Who I Am",
     description:
-      "I'm a full stack developer driven by a passion for clean, scalable code and solving meaningful real-world problems through technology.",
+      "I’m a full-stack developer who loves building clean, practical code that solves problems efficiently.",
   },
   {
     icon: <FaCode className="text-4xl mb-4 text-gray-700 dark:text-gray-200" />,
     title: "What I Do",
     description:
-      "I design and develop modern web applications using React, Django, PostgreSQL, Redis, and WebSockets — building responsive, efficient, and user-friendly systems.",
+      "I build web and mobile apps using React, React Native, Django, FastAPI, Node, and Express—focused on performance, usability, and reliability.",
   },
   {
     icon: <FaLightbulb className="text-4xl mb-4 text-gray-700 dark:text-gray-200" />,
     title: "Interests",
     description:
-      "I enjoy real-time systems, developer tooling, open source contributions, and exploring cutting-edge technologies in the web ecosystem.",
+      "I enjoy real-time systems, developer tooling, open source projects, and experimenting with new frameworks and APIs.",
   },
   {
     icon: <FaBug className="text-4xl mb-4 text-gray-700 dark:text-gray-200" />,
     title: "Fun Fact",
     description:
-      "Debugging isn’t just a task — it’s a challenge I enjoy. Tracking down bugs sharpens my skills and keeps development exciting.",
+      "Debugging is my puzzle time—it keeps coding fun and sharpens my problem-solving skills.",
   },
 ];
 
@@ -48,7 +48,7 @@ export default function About() {
   return (
     <motion.section
       id="about"
-      className="relative min-h-screen scroll-mt-24 px-6 py-24 flex flex-col items-center bg-[var(--bg)] text-[var(--text)] overflow-hidden"
+      className="relative scroll-mt-24 px-6 py-24 flex flex-col items-center bg-[var(--bg)] text-[var(--text)] overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }} // triggers when section is partially visible

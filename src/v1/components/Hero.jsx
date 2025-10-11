@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <motion.section
       id="home"
-      className="relative overflow-hidden min-h-screen scroll-mt-24 pt-24 bg-v1BgDark flex items-center justify-center px-6"
+      className="relative overflow-hidden scroll-mt-24 pt-24 bg-v1BgDark flex items-center justify-center px-6"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
