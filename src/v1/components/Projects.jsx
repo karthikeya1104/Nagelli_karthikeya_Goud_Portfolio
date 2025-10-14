@@ -78,11 +78,11 @@ export default function Projects() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      viewport={{ once: false }}
+      viewport={{ once: true }} // Animate only once
     >
       {/* Glowing Background Blobs */}
-      <div className="absolute w-[300px] h-[300px] bg-purple-700 rounded-full blur-3xl opacity-20 top-20 left-[-100px] animate-pulse z-0" />
-      <div className="absolute w-[250px] h-[250px] bg-yellow-500 rounded-full blur-2xl opacity-20 bottom-10 right-[-60px] animate-pulse z-0" />
+      <div className="absolute w-[300px] h-[300px] bg-purple-700 rounded-full blur-3xl opacity-20 top-20 left-[-100px] z-0" />
+      <div className="absolute w-[250px] h-[250px] bg-yellow-500 rounded-full blur-2xl opacity-20 bottom-10 right-[-60px] z-0" />
 
       {/* Section Title */}
       <motion.h2
@@ -90,25 +90,28 @@ export default function Projects() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
       >
         Projects
       </motion.h2>
 
-      {/* Animated Divider */}
+      {/* Divider */}
       <motion.div
         className="h-[2px] w-20 bg-gradient-to-r from-purple-500 to-yellow-500 mb-12 z-10"
         initial={{ scaleX: 0 }}
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.6 }}
         style={{ transformOrigin: 'left' }}
+        viewport={{ once: true }}
       />
 
-      {/* Swiper Container */}
+      {/* Swiper */}
       <motion.div
         className="w-full max-w-xl z-10"
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
       >
         <Swiper
           modules={[Autoplay, Pagination]}
@@ -127,21 +130,18 @@ export default function Projects() {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 viewport={{ once: true }}
               >
-                {/* Hover background glow */}
+                {/* Hover glow */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-yellow-500/20 opacity-0 group-hover:opacity-10 rounded-xl z-0" />
 
-                {/* Project Image */}
                 <img
                   src={project.image}
                   alt={project.title || 'Project Image'}
                   className="rounded-md mb-4 w-full aspect-[16/9] object-fit shadow relative z-10"
                 />
 
-                {/* Project Title and Description */}
                 <h3 className="text-2xl font-semibold mb-2 relative z-10">{project.title}</h3>
                 <p className="text-gray-300 text-sm flex-grow relative z-10">{project.desc}</p>
 
-                {/* Click to view more details" */}
                 <p className="text-sm text-gray-400 mt-4 italic tracking-wide relative z-10">
                   Click to view more details →
                 </p>
@@ -151,7 +151,6 @@ export default function Projects() {
         </Swiper>
       </motion.div>
 
-      {/* Modal */}
       {selectedProject && (
         <ProjectModal
           isOpen={!!selectedProject}

@@ -36,11 +36,11 @@ export default function About() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.2 }}
-      viewport={{ once: false }}
+      viewport={{ once: true }} // Only animate once on scroll
     >
       {/* Background Blobs */}
-      <div className="absolute w-[400px] h-[400px] bg-purple-700 rounded-full blur-3xl opacity-20 top-10 left-[-100px] animate-pulse z-0" />
-      <div className="absolute w-[300px] h-[300px] bg-yellow-500 rounded-full blur-2xl opacity-20 bottom-10 right-[-80px] animate-pulse z-0" />
+      <div className="absolute w-[400px] h-[400px] bg-purple-700 rounded-full blur-3xl opacity-20 top-10 left-[-100px] z-0" />
+      <div className="absolute w-[300px] h-[300px] bg-yellow-500 rounded-full blur-2xl opacity-20 bottom-10 right-[-80px] z-0" />
 
       {/* Section Title */}
       <motion.h2
@@ -48,6 +48,7 @@ export default function About() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.2 }}
+        viewport={{ once: true }} // Animate only once
       >
         About Me
       </motion.h2>
@@ -59,6 +60,7 @@ export default function About() {
         whileInView={{ scaleX: 1 }}
         transition={{ duration: 0.2 }}
         style={{ transformOrigin: "left" }}
+        viewport={{ once: true }} // Animate only once
       />
 
       {/* Card Grid */}
@@ -69,7 +71,7 @@ export default function About() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: index * 0.1 }}
-            viewport={{ once: false, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.2 }} // Already animates only once
             whileHover={{ scale: 1.05 }}
             className="relative group bg-white/5 border border-white/10 backdrop-blur-md rounded-xl p-6 shadow-md transition-transform overflow-hidden"
           >

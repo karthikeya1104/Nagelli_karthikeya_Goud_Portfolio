@@ -40,7 +40,6 @@ export default function CodingProfiles() {
       setStats(JSON.parse(savedStats));
       setLoading(false);
     } else {
-
       fetch(apiUrl)
         .then((res) => res.json())
         .then((data) => {
@@ -64,6 +63,7 @@ export default function CodingProfiles() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }} // Animate only once
       >
         Coding Profiles
       </motion.h2>
@@ -83,12 +83,13 @@ export default function CodingProfiles() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.05, delay: idx * 0.2 }}
             whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }} // Animate only once
             className="group cursor-pointer bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all relative overflow-hidden"
           >
             <motion.div
               className="absolute inset-0 bg-white/5 blur-lg opacity-0 group-hover:opacity-10 transition duration-300 pointer-events-none"
               animate={{ scale: [1, 1.05, 1], opacity: [0.05, 0.1, 0.05] }}
-              transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 1, ease: "easeInOut" }}
             />
 
             <div className="flex items-center gap-4 mb-4">

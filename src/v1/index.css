@@ -27,6 +27,18 @@ html {
   @apply bg-[var(--bg)] text-[var(--text)] font-sans min-h-screen;
 }
 
+/* ✅ Hide scrollbar globally but keep scroll behavior */
+html, body {
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
+}
+
 /* Inputs & Cards (frosted glass) */
 .input, .card, input, textarea, button {
   background-color: var(--card-bg);

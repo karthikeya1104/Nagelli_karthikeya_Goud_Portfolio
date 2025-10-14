@@ -33,7 +33,7 @@ export default function Contact() {
       className="scroll-mt-[40px] bg-v1BgDark text-white px-6 py-20 flex flex-col items-center justify-center"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }} // Animate only once
       transition={{ duration: 0.6 }}
       variants={{
         hidden: { opacity: 0, y: 60 },
@@ -48,6 +48,7 @@ export default function Contact() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }} // Animate only once
       >
         <div>
           <label className="block text-sm mb-1">Name</label>
@@ -96,7 +97,7 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }} // Animate only once
       >
         <motion.a
           href="https://github.com/karthikeya1104"

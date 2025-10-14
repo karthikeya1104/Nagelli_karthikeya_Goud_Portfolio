@@ -10,7 +10,7 @@ export default function Hero() {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      viewport={{ once: false }}
+      viewport={{ once: true }} // Animate only once
     >
       {/* Background Blobs */}
       <div className="absolute w-[400px] h-[400px] bg-purple-600 rounded-full blur-3xl opacity-20 top-10 left-10 animate-pulse z-0" />
@@ -21,7 +21,7 @@ export default function Hero() {
         initial={{ y: 60, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
-        viewport={{ once: false }}
+        viewport={{ once: true }}
         className="relative z-10 backdrop-blur-md bg-white/5 border border-white/10 shadow-lg rounded-xl p-10 text-center max-w-2xl w-full"
       >
         {/* Heading */}
@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           Hi, I'm Nagelli Karthikeya Goud
         </motion.h1>
@@ -41,7 +41,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           Full Stack Developer | Tech Enthusiast | Problem Solver
         </motion.h2>
@@ -52,7 +52,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           I’m a full stack developer passionate about building modern, responsive web applications that solve real-world problems. I focus on writing clean, efficient, and scalable code across the stack, using the right tools for the job.
         </motion.p>
@@ -63,7 +63,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           {/* View Resume */}
           <motion.a
@@ -97,7 +97,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          viewport={{ once: false }}
+          viewport={{ once: true }}
         >
           <motion.a
             href="https://github.com/karthikeya1104"

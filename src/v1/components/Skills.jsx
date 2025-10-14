@@ -102,13 +102,15 @@ export default function Skills() {
       id="skills"
       className="scroll-mt-24 bg-v1BgDark text-white px-6 py-20 relative overflow-hidden"
     >
-      {/* Glowing Background Icons */}
+      {/* Background Icons */}
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
-          className={`absolute ${item.className} text-[6rem] opacity-10 pointer-events-none z-0 animate-pulse`}
-          animate={{ scale: [1, 1.1, 1], rotate: [0, 10, -10, 0] }}
-          transition={{ repeat: Infinity, duration: 8 + i * 2, ease: 'easeInOut' }}
+          className={`absolute ${item.className} text-[6rem] opacity-10 pointer-events-none z-0`}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 + i * 0.3 }}
+          viewport={{ once: true }}
         >
           {item.icon}
         </motion.div>
@@ -119,6 +121,7 @@ export default function Skills() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
       >
         Skills
       </motion.h2>
@@ -134,15 +137,15 @@ export default function Skills() {
 
       <div className="grid md:grid-cols-2 gap-10 w-full max-w-6xl mx-auto z-10 relative">
         {Object.entries(activeSkills).map(([title, items], idx) => (
-            <motion.div
-              key={title}
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-lg"
-              initial={{ rotateY: 90, opacity: 0 }}
-              whileInView={{ rotateY: 0, opacity: 1 }}
-              viewport={{ once: false, amount: 0.3 }}
-              transition={{ duration: 0.8, delay: idx * 0.2 }}
-              style={{ transformStyle: 'preserve-3d' }}
-            >
+          <motion.div
+            key={title}
+            className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-6 shadow-lg"
+            initial={{ rotateY: 90, opacity: 0 }}
+            whileInView={{ rotateY: 0, opacity: 1 }}
+            transition={{ duration: 0.8, delay: idx * 0.2 }}
+            style={{ transformStyle: 'preserve-3d' }}
+            viewport={{ once: true }}
+          >
             <div className="text-xl font-semibold mb-4">{title}</div>
             <div className="flex flex-wrap gap-3">
               {items.map((skill) => (
