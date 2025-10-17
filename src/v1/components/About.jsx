@@ -39,8 +39,8 @@ export default function About() {
       viewport={{ once: true }} // Only animate once on scroll
     >
       {/* Background Blobs */}
-      <div className="absolute w-[400px] h-[400px] bg-purple-700 rounded-full blur-3xl opacity-20 top-10 left-[-100px] z-0" />
-      <div className="absolute w-[300px] h-[300px] bg-yellow-500 rounded-full blur-2xl opacity-20 bottom-10 right-[-80px] z-0" />
+      <div className="absolute w-[400px] h-[400px] bg-purple-700 rounded-full blur-3xl opacity-20 top-10 left-[-100px] animate-pulse z-0" />
+      <div className="absolute w-[300px] h-[300px] bg-yellow-500 rounded-full blur-2xl opacity-20 bottom-10 right-[-80px] animate-pulse z-0" />
 
       {/* Section Title */}
       <motion.h2

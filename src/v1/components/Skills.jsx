@@ -106,11 +106,9 @@ export default function Skills() {
       {floatingIcons.map((item, i) => (
         <motion.div
           key={i}
-          className={`absolute ${item.className} text-[6rem] opacity-10 pointer-events-none z-0`}
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 + i * 0.3 }}
-          viewport={{ once: true }}
+          className={`absolute ${item.className} text-[6rem] opacity-10 pointer-events-none z-0 animate-pulse`}
+          animate={{ scale: [1, 1.1, 1], rotate: [0, 10, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 8 + i * 2, ease: 'easeInOut' }}
         >
           {item.icon}
         </motion.div>
