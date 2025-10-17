@@ -9,27 +9,6 @@ html {
   scroll-behavior: smooth;
 }
 
-.swiper-pagination-bullet {
-  background: #999;
-  opacity: 0.6;
-  transition: all 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-  background: #fff;
-  opacity: 1;
-  transform: scale(1.2);
-}
-
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; /* only hide horizontal overflow */
-  overflow-y: auto;   /* show vertical scroll */
-}
-
-
 /* V1 Theme variables */
 .v1-theme {
   --bg: #1A1F2B;
@@ -69,6 +48,18 @@ button:hover {
   opacity: 0.9;
   transform: scale(1.02);
   transition: all 0.3s ease;
+}
+
+/* ✅ Hide scrollbar globally but keep scroll behavior */
+html, body {
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;             /* Chrome, Safari, Opera */
 }
 
 /* Typography */
