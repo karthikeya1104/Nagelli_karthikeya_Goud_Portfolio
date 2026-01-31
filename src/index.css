@@ -90,17 +90,14 @@ a:hover {
   color: var(--accent-hover);
   transition: color 0.3s ease;
 }
+/* Swiper marquee effect */
 
-/* Swiper Pagination */
-.swiper-pagination-bullet {
-  background: #999;
-  opacity: 0.6;
-  transition: all 0.3s ease;
+.projects-marquee .swiper-wrapper {
+  transition-timing-function: linear !important;
 }
-.swiper-pagination-bullet-active {
-  background: var(--accent);
-  opacity: 1;
-  transform: scale(1.2);
+
+.projects-marquee {
+  pointer-events: auto;
 }
 
 /* Gradient Border Animation */

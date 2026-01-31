@@ -1,16 +1,35 @@
 import { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper/modules';
+import { Autoplay } from 'swiper/modules';
 import { motion } from 'framer-motion';
 import 'swiper/css';
-import 'swiper/css/pagination';
+
 import ProjectModal from './ProjectModal';
 
 import skilltrackerImg from '../assets/projects-images/skilltracker.png';
 import didImg from '../assets/projects-images/blockchain.png';
 import socialappImg from '../assets/projects-images/socialapp.png';
+import placementImg from '../assets/projects-images/placement.png';
 
 const projects = [
+  {
+    title: 'Placement Tracker App',
+    desc: 'Mobile app to track placement updates.',
+    longDesc:
+      'An offline-first mobile application that captures placement updates from WhatsApp or manual entries, categorizes companies as registered or unregistered, and provides a clean dashboard with filters and sorting.',
+    image: placementImg,
+    tech: ['React Native', 'TypeScript', 'SQLite', 'Gemini API'],
+    github: [
+      { label: 'GitHub', url: 'https://github.com/karthikeya1104/placement-tracker' },
+    ],
+    demo: 'https://drive.google.com/file/d/1Fn44eQ8g7njkifsHds1GwQspBYakJ_Tr/view',
+    features: [
+      'WhatsApp & manual capture',
+      'Company categorization',
+      'Offline-first storage',
+      'Dashboard with filters',
+    ],
+  },
   {
     title: 'Decentralized Identity System',
     desc: 'A blockchain-based system for secure document issuance and verification.',
@@ -69,93 +88,85 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="relative scroll-mt-24 px-6 py-20 flex flex-col items-center bg-[var(--bg)] text-[var(--text)]"
+      className="relative scroll-mt-24 px-6 py-24 bg-[var(--bg)] text-[var(--text)] overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      {/* Section Title */}
-      <motion.div
-        className="flex flex-col items-center mb-16"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.3 }}
+      {/* Title */}
+      <div className="flex flex-col items-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-extrabold">Projects</h2>
+        <div className="h-[2px] w-20 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 mt-3" />
+      </div>
+
+      {/* Marquee */}
+      <Swiper
+        modules={[Autoplay]}
+        slidesPerView="auto"
+        spaceBetween={32}
+        loop
+        freeMode
+        speed={15000}
+        autoplay={{
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        className="projects-marquee"
       >
-        <h2 className="text-3xl md:text-4xl font-extrabold text-center relative inline-block">
-          Projects
-        </h2>
-        <motion.div
-          className="h-[2px] w-20 bg-gradient-to-r from-purple-500 via-pink-500 to-indigo-500 mt-3 origin-center"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        />
-      </motion.div>
+        {[...projects, ...projects].map((project, i) => (
+          <SwiperSlide
+            key={i}
+            className="
+              !w-[85vw]
+              sm:!w-[420px]
+              md:!w-[520px]
+              lg:!w-[600px]
+              xl:!w-[680px]
+            "
+          >
+            <motion.div
+              onClick={() => setSelectedProject(project)}
+              className="
+                cursor-pointer
+                rounded-2xl
+                border border-gray-300
+                bg-white/80 dark:bg-gray-900
+                dark:border-gray-700
+                p-6 md:p-8
+                shadow-xl
+              "
+              whileHover={{ y: -8 }}
+            >
+              {/* Title FIRST */}
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 text-center">
+                {project.title}
+              </h3>
 
-      {/* Swiper */}
-      <motion.div
-        className="w-full max-w-2xl mt-12"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <Swiper
-          modules={[Autoplay, Pagination]}
-          slidesPerView={1}
-          loop={true}
-          autoplay={{ delay: 4000, disableOnInteraction: false }}
-          pagination={{ 
-            clickable: true,
-            el: '.swiper-pagination-custom', // custom container
-          }}
-          className="pb-0" // remove extra padding
-        >
-          {projects.map((project, i) => (
-            <SwiperSlide key={i}>
-              <motion.div
-                onClick={() => setSelectedProject(project)}
-                className="relative cursor-pointer rounded-xl border border-gray-400 bg-white/80 dark:bg-gray-900 dark:border-gray-700 p-6 shadow-lg flex flex-col hover:scale-[1.03] transition-all duration-300"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="overflow-hidden rounded-md mb-4">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full aspect-[16/9] object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
+              {/* Image = layout anchor */}
+              <div className="overflow-hidden rounded-xl mb-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full aspect-[16/9] fit-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
 
-                <h3 className="text-xl md:text-2xl font-semibold mb-2 text-gray-800 dark:text-gray-100">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 text-sm mb-2">
-                  {project.desc}
-                </p>
-
-                <span className="inline-block mt-auto text-gray-600 dark:text-gray-400 text-sm italic">
-                  Click to view more →
-                </span>
-              </motion.div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-{/* Pagination container outside the card box */}
-<div className="swiper-pagination-custom flex justify-center mt-6"></div>
-
-      </motion.div>
+              {/* Description (controlled) */}
+              <p className="text-gray-600 dark:text-gray-300 text-base md:text-lg text-center line-clamp-2">
+                {project.desc}
+                <br/><br/>click to view more.
+              </p>
+            </motion.div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
 
       {/* Modal */}
       {selectedProject && (
         <ProjectModal
-          isOpen={!!selectedProject}
+          isOpen
           project={selectedProject}
           onClose={() => setSelectedProject(null)}
         />
